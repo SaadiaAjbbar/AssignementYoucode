@@ -11,9 +11,15 @@ function fetching() {
     .then(res => res.json())//transforme la réponse en JSON (lit la réponse sous forme JSON)
     .then(data => {
       console.log(data);// ici tu as tes données(peut utiliser les donnees)
-      let dog = data[i];
-      animal_image.src = dog.image_link;
-      animal_description.innerText = dog.name;
+      if (i <= data.length) {
+        let dog = data[i];
+        animal_image.src = dog.image_link;
+        animal_description.innerText = dog.name;
+      }
+      else {
+        animal_description.innerText = "vous avez vu tous les animaux ";
+        animal_image.style.display = "none";
+      }
     })
     .catch(error => {
       console.log("Erreur :", error);//pour gérer les erreurs
@@ -24,6 +30,4 @@ fetching();
 dislike.addEventListener('click', () => {
   i++;
   fetching();
-  
-
 })
