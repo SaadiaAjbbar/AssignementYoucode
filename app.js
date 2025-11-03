@@ -3,7 +3,7 @@ const animal_description = document.getElementById("animal-description");
 const like = document.getElementById("like");
 const dislike = document.getElementById("dislike");
 let i = 0;
-
+monStockage = localStorage;
 function fetching() {
   fetch("https://api.api-ninjas.com/v1/dogs?shedding=1", {
     headers: { "X-Api-Key": "INNa/HEA9YjTmZ5z9OXFeA==jvXoUsac4M201zNv" }
@@ -31,3 +31,8 @@ dislike.addEventListener('click', () => {
   i++;
   fetching();
 })
+
+
+localStorage.setItem("nom", "Saadia");
+let nom = localStorage.getItem("nom");
+console.log(nom); // "Saadia"
