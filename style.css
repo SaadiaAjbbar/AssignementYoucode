@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.card{
+    height: 400px;
+    width: 500px;
+    background-color: rgb(150, 127, 159);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+#animal-image{
+width: 80%;
+border-radius: 10px;
+}
+#animal-description{
+    color: white;
+    font-size: 20px;
+}
+#dislike{
+    padding: 20px;
+    background-color: rgb(211, 47, 47);
+    border: none;
+    border-radius: 7px;
+    width: 100px;
+}
+#like{
+    padding: 20px;
+    background-color: rgb(74, 152, 194);
+    border: none;
+    border-radius: 7px;
+    width: 100px;
+}
